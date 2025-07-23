@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "name": "logge hellr",
+  "version": "1.0.0",
+  "main": "logger.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "void",
+  "license": "MIT",
+  "description": "simple logger "
+}
