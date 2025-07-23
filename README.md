@@ -1,5 +1,6 @@
 # Logger Hell
 
+
 ## 📥 Installation
 
 Clone the repository and install the dependencies:
@@ -66,3 +67,12 @@ That public link is now accessible to anyone — you can use it to test your log
 ## 📌 Example Usage
 
 Send the `ngrok.io` link to the target and wait for a connection on your terminal.
+
+## ⚠️ Legal Disclaimer
+
+This project is for **educational and research purposes only**.
+
+The author is **not responsible** for any misuse, damage, or illegal activities caused by this code.  
+**Use it at your own risk.**
+
+> Unauthorized use against others may lead to **legal consequences** or **account bans**.
