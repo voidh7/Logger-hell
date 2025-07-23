@@ -14,6 +14,7 @@ The author is **not responsible** for any misuse, damage, or illegal activities 
 
 
 const express = require("express");
+const {getIpInfo} = require("./getIpInfo")
 const fs = require("fs");
 const app = express();
 const port = 3000;
@@ -42,12 +43,13 @@ app.get("/", (req, res) => {
   const ip = req.headers["x-forwarded-for"] || req.connection.remoteAddress;
 
 
-  fs.appendFile("log.txt", `${ip}\n`, err => {
+  fs.appendFile("log.txt", `${ip} \n ${dataIp}\n`, err => {
     if (err) {
       console.log("Erro ao salvar IP");
     }
   });
   console.log(ip,":entrou \n")
+  console.log(dataip,"\n");
 
 
   res.redirect(302, link);
