@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "axios": "^1.11.0"
   },
   "name": "logge hellr",
   "version": "1.0.0",
