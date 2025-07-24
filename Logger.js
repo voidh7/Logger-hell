@@ -1,10 +1,6 @@
 /*
 logger hell by void
 
-use o ngrok ou outra ferrmenta que cria um tunel entre
-a localhost e a internet
-
-(não me responsabilizo pelo uso dela, ou possiveis danos causados a terceiros)
 
 */
 
