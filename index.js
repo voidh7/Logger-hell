@@ -434,4 +434,4 @@ app.listen(port, () => {
     console.log("    📁 detailed/  - Dados detalhados");
     console.log("    📁 media/     - Fotos e áudios");
     console.log("    📁 gps/       - Dados GPS completos");
-void
+
