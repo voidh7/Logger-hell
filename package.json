@@ -1,17 +1,17 @@
 {
   "dependencies": {
+    "axios": "^1.11.0",
     "express": "^5.1.0",
-    "axios": "^1.11.0"
+    "figlet": "^1.9.3",
+    "multer": "^2.0.2"
   },
-  "name": "logge hellr",
+  "name": "logge },
   "version": "1.0.0",
-  "main": "logger.js",
-  "devDependencies": {},
+  "main": hellr".js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "void",
+  "author": "logger,
   "license": "MIT",
   "description": "simple logger "
-}
