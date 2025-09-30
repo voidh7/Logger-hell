@@ -15,7 +15,7 @@ npm install
 Start the logger locally:
 
 ```bash
-node logger.js
+node index.loggergger
 ```
 
 By default, it will run on port `3000`.
